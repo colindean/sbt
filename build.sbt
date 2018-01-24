@@ -463,7 +463,7 @@ lazy val mainProj = (project in file("main"))
 lazy val sbtProj = (project in file("sbt"))
   .dependsOn(mainProj, scriptedSbtProj % "test->test")
   .settings(
-    baseSettings,
+    testedBaseSettings,
     name := "sbt",
     normalizedName := "sbt",
     crossScalaVersions := Seq(baseScalaVersion),
